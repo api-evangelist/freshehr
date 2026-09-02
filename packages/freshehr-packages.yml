@@ -1,0 +1,85 @@
+generated: '2026-09-02'
+method: searched
+source: >-
+  registry.npmjs.org (search + package metadata endpoints), pypi.org, and the
+  github.com/freshehr account listing. Probed 2026-09-02.
+note: >-
+  freshEHR Clinical Informatics is an openEHR/HL7 FHIR consultancy, not an API
+  platform vendor. It publishes no client SDK, because it operates no API of its
+  own. The packages below are open tooling its people publish for working with
+  the openEHR REST API and with third-party openEHR platforms (Better/Ehrscape,
+  Archetype Designer). They are deliberately NOT wired as `type: SDKs`: an SDK
+  pointer asserts a client library for the provider's own API, and freshEHR has
+  none.
+registries_checked:
+- registry: npm
+  endpoint: https://registry.npmjs.org/-/v1/search?text=freshehr
+  result: 2 matching packages; maintainer searches for imcnicoll and joostholslag returned 3 distinct packages total
+- registry: pypi
+  endpoint: https://pypi.org/pypi/freshehr/json
+  status: 404
+  result: no freshEHR package
+- registry: rubygems
+  result: not searched — no Ruby surface in the freshEHR GitHub account
+- registry: maven-central
+  result: not searched — no Java artifact published under a freshEHR coordinate
+packages:
+- name: freshehr-postman-openehr-shim
+  registry: npm
+  url: https://www.npmjs.com/package/freshehr-postman-openehr-shim
+  metadata: https://registry.npmjs.org/freshehr-postman-openehr-shim
+  version: 1.0.0
+  published: '2025-05-01'
+  license: Apache-2.0
+  official: true
+  official_basis: >-
+    npm `author` is "dr. Ian McNicoll" (freshEHR founder/CEO) and the declared
+    repository is git://github.com/freshehr/freshehr-postman-openehr-shim.git,
+    inside the company's own GitHub namespace.
+  description: package helping postman shim openEHR REST api requests.
+  language: javascript
+  purpose: Postman helper for issuing openEHR REST API requests.
+  note: >-
+    The repository the package declares (github.com/freshehr/freshehr-postman-openehr-shim)
+    returned HTTP 404 on 2026-09-02 — the published npm artifact outlives its
+    source repo. Only release ever published; no 1.0.1+.
+- name: wt2docx
+  registry: npm
+  url: https://www.npmjs.com/package/wt2docx
+  metadata: https://registry.npmjs.org/wt2docx
+  version: 1.0.0-rc1
+  published: '2024-01-04'
+  license: ISC
+  official: true
+  official_basis: >-
+    npm `author` is "Ian M <ian@freshehr.com>" and the declared repository is
+    github.com/freshehr/wt2docx.
+  description: >-
+    openEHR WebTemplate to Asciidoc/Docx/Xmind documentation — a util by Bifrost
+    modified by freshEHR.
+  language: typescript
+  purpose: >-
+    CLI documentation generator that turns an Archetype Designer openEHR web
+    template into Asciidoc/Docx/Xmind.
+  upstream: https://github.com/bjornna/wt2doc
+  note: >-
+    freshEHR's GitHub copy is a fork of bjornna/wt2doc; freshEHR is the party
+    that publishes it to npm. Still on a release candidate (1.0.0-rc1) more than
+    two years after publication.
+- name: better-sandbox-get-token
+  registry: npm
+  url: https://www.npmjs.com/package/better-sandbox-get-token
+  metadata: https://registry.npmjs.org/better-sandbox-get-token
+  version: 21.0.0
+  published: '2025-05-12'
+  license: CC0-1.0
+  official: false
+  official_basis: >-
+    Authored by Joost Holslag (a freshEHR associate) and co-maintained by
+    imcnicoll, but the declared repository sits in a personal namespace
+    (github.com/joostholslag/Better-sandbox-get-token) and the package targets
+    Better's sandbox (sandbox.better.care), a third-party platform. Recorded for
+    completeness, not claimed as a freshEHR product.
+  description: >-
+    Postman script for retrieving a bearer auth token from sandbox.better.care.
+  language: javascript

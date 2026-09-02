@@ -64,5 +64,10 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-freshEHR is a company surfaced via the API Evangelist harvest backlog (source: openehr-coalition) and added to the network as a stub for full-pipeline profiling.
-- http://freshehr.com/
+freshEHR Clinical Informatics Ltd is a UK open-standards health and social care informatics consultancy, founded in 2014 by Dr Ian McNicoll and registered in England as company 08989238. It provides openEHR and HL7 FHIR expertise rather than a software product: openEHR strategy, analysis, design and governance of clinical models, terminology and data mapping across SNOMED CT, dm+d and ICD, data exchange work across HL7 V2, HL7 CDA and HL7 FHIR, plus specialist training and mentoring in clinical modelling.
+
+freshEHR operates **no API of its own** — no developer portal, no public API reference, and no machine-readable contract on any host it controls. Every `/.well-known/` and specification path probed on `freshehr.com` and `freshehr.github.io` returned 404 on 2026-09-02, and `api.`/`docs.`/`training.`/`app.freshehr.com` do not resolve in DNS. See `well-known/freshehr-well-known.yml` for the full probe record and `x-coverage` in `apis.yml` for the coverage disclosure. The openEHR REST API that freshEHR teaches and consults on is a specification of the [openEHR Foundation](https://openehr.org/), not a freshEHR product.
+
+- https://freshehr.com/
+- https://github.com/freshehr
+- https://freshehr.github.io/openEHR-101/ (freshEHR-authored openEHR/Ehrscape training documentation)

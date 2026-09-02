@@ -1,0 +1,73 @@
+generated: '2026-09-02'
+method: probed
+source: >-
+  Direct HTTPS GETs against every host freshEHR controls (freshehr.com, the
+  apex named in apis.yml, and freshehr.github.io, the GitHub Pages host serving
+  its published documentation). Probed 2026-09-02 with a browser User-Agent.
+note: >-
+  Every named /.well-known path 404s on every freshEHR host. No `WellKnown`,
+  `APICatalog` or `SecurityTxt` pointer is wired in apis.yml, because there is
+  no served document to point at — this file records a verified ABSENCE, not a
+  presence. freshEHR has no API host: DNS resolution for api.freshehr.com,
+  docs.freshehr.com, training.freshehr.com and app.freshehr.com all failed, so
+  freshehr.com and freshehr.github.io are the complete host set.
+hosts:
+- host: freshehr.com
+  role: corporate website (apis.yml Website)
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+  - path: /security.txt
+    status: 404
+  - path: /llms.txt
+    status: 404
+  - path: /openapi.json
+    status: 404
+  - path: /openapi.yaml
+    status: 404
+  - path: /swagger.json
+    status: 404
+  - path: /api-docs
+    status: 404
+  - path: /apis.json
+    status: 404
+  - path: /robots.txt
+    status: 404
+  - path: /sitemap.xml
+    status: 404
+- host: freshehr.github.io
+  role: GitHub Pages host for freshEHR's published openEHR documentation and training sites
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+  - path: /llms.txt
+    status: 404
+  - path: /openapi.json
+    status: 404
+unresolved_hosts:
+- host: api.freshehr.com
+  status: <no DNS>
+- host: docs.freshehr.com
+  status: <no DNS>
+- host: training.freshehr.com
+  status: <no DNS>
+- host: app.freshehr.com
+  status: <no DNS>

@@ -1,8 +1,20 @@
 aid: freshehr
 name: freshEHR
-description: 'freshEHR is a company surfaced via the API Evangelist harvest backlog (source: openehr-coalition)
-  and added to the network as a stub for full-pipeline profiling.'
+description: >-
+  freshEHR Clinical Informatics Ltd is a UK open-standards health and social care
+  informatics consultancy, founded in 2014 by Dr Ian McNicoll and registered in
+  England as company 08989238. It provides openEHR and HL7 FHIR expertise rather
+  than a software product: openEHR strategy, analysis, design and governance of
+  clinical models (archetypes and templates), curation, terminology and data
+  mapping across SNOMED CT, dm+d and ICD, data exchange work across HL7 V2, HL7
+  CDA and HL7 FHIR, plus specialist training and mentoring in clinical modelling.
+  Its work spans NHS England, NHS Education for Scotland, Digital Health and Care
+  Wales, HSE Ireland, One London, CatSalut in Catalonia, the Jamaican Ministry of
+  Health and Wellness, and Karolinska University Hospital. freshEHR operates no
+  API of its own — no developer portal, no public API reference, and no
+  machine-readable contract on any host it controls, verified 2026-09-02.
 url: https://raw.githubusercontent.com/api-evangelist/freshehr/refs/heads/main/apis.yml
+image: https://freshehr.com/assets/img/freshehr-logo-2.png
 x-type: company
 x-source: harvest:openehr-coalition
 x-tier: stub
@@ -12,6 +24,18 @@ created: '2026-09-02'
 modified: '2026-09-02'
 tags:
 - Company
+- Consulting
+- Health
+- Healthcare
+- Clinical Informatics
+- Electronic Health Records
+- openEHR
+- HL7 FHIR
+- SNOMED CT
+- Interoperability
+- Standards
+- Training
+- United Kingdom
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -20,4 +44,46 @@ maintainers:
   email: info@apis.io
 common:
 - type: Website
-  url: http://freshehr.com/
+  url: https://freshehr.com/
+- type: PrivacyPolicy
+  url: https://freshehr.com/privacy/
+- type: GitHubOrganization
+  url: https://github.com/freshehr
+- type: LinkedIn
+  url: https://www.linkedin.com/company/10361651/
+- type: Twitter
+  url: https://x.com/freshehr
+- type: Packages
+  url: packages/freshehr-packages.yml
+- type: LLMsTxt
+  url: llms/freshehr-llms.txt
+- type: DomainSecurity
+  url: security/freshehr-domain-security.yml
+x-enrichment:
+  date: '2026-09-02'
+  status: minimal
+  artifacts_added: 4
+  pass: local-v1
+x-coverage:
+  state: none
+  reason: no-developer-program
+  detail: >-
+    freshEHR is an openEHR/HL7 FHIR consultancy that sells modelling, training and
+    implementation expertise rather than software — freshehr.com is a five-section
+    brochure site whose only technical link is a training page, and every contract
+    and /.well-known path probed on freshehr.com and freshehr.github.io returned
+    404 while api./docs./training./app.freshehr.com do not resolve in DNS.
+  evidence:
+  - url: https://freshehr.com/
+    status: 200
+  - url: https://freshehr.com/openapi.json
+    status: 404
+  - url: https://freshehr.com/.well-known/api-catalog
+    status: 404
+  - url: https://freshehr.com/.well-known/agent-card.json
+    status: 404
+  - url: https://freshehr.github.io/openapi.json
+    status: 404
+  - url: https://api.freshehr.com/
+    status: <no DNS>
+  checked: '2026-09-02'
