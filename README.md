@@ -64,10 +64,81 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-freshEHR Clinical Informatics Ltd is a UK open-standards health and social care informatics consultancy, founded in 2014 by Dr Ian McNicoll and registered in England as company 08989238. It provides openEHR and HL7 FHIR expertise rather than a software product: openEHR strategy, analysis, design and governance of clinical models, terminology and data mapping across SNOMED CT, dm+d and ICD, data exchange work across HL7 V2, HL7 CDA and HL7 FHIR, plus specialist training and mentoring in clinical modelling.
+freshEHR Clinical Informatics Ltd is a UK open-standards health and social care informatics consultancy, founded in 2014 by Dr Ian McNicoll and registered in England as company 08989238. It provides openEHR and HL7 FHIR expertise rather than a software product: openEHR strategy, analysis, design and governance of clinical models (archetypes and templates), curation, terminology and data mapping across SNOMED CT, dm+d and ICD, data exchange work across HL7 V2, HL7 CDA and HL7 FHIR, plus specialist training and mentoring in clinical modelling. Its work spans NHS England, NHS Education for Scotland, Digital Health and Care Wales, HSE Ireland, One London, CatSalut in Catalonia, the Jamaican Ministry of Health and Wellness, and Karolinska University Hospital. freshEHR operates no API of its own — no developer portal, no public API reference, and no machine-readable contract on any host it controls, verified 2026-09-02.
 
-freshEHR operates **no API of its own** — no developer portal, no public API reference, and no machine-readable contract on any host it controls. Every `/.well-known/` and specification path probed on `freshehr.com` and `freshehr.github.io` returned 404 on 2026-09-02, and `api.`/`docs.`/`training.`/`app.freshehr.com` do not resolve in DNS. See `well-known/freshehr-well-known.yml` for the full probe record and `x-coverage` in `apis.yml` for the coverage disclosure. The openEHR REST API that freshEHR teaches and consults on is a specification of the [openEHR Foundation](https://openehr.org/), not a freshEHR product.
+**Areas:** Company · Consulting · Health · Healthcare · Clinical Informatics · Electronic Health Records · openEHR · FHIR · SNOMED CT · Interoperability · Standards · Training
 
-- https://freshehr.com/
-- https://github.com/freshehr
-- https://freshehr.github.io/openEHR-101/ (freshEHR-authored openEHR/Ehrscape training documentation)
+## freshEHR on APIs.io
+
+Everything profiled for freshEHR is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/freshehr/](https://apis.io/providers/freshehr/)** — or go straight to one of the APIs or properties below.
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### Security (1)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Freshehr Domain Security](https://apis.io/security/freshehr/freshehr-domain-security/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://freshehr.com/)
+- [Privacy policy](https://freshehr.com/privacy/)
+- [GitHub](https://github.com/freshehr)
+
+## API Evangelist rating
+
+**Kin Score 6.6** — minimal · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 48.2 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 2.6 |
+| Developer ergonomics | 0.0 |
+| Access clarity | 10.5 |
+
+**Agent readiness 0.0** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 7.8** — Health
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/freshehr/](https://apis.io/providers/freshehr/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for freshEHR: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/freshehr/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
